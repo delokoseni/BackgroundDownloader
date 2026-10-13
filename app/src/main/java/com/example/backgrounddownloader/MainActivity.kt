@@ -7,17 +7,26 @@ import androidx.activity.enableEdgeToEdge
 import com.example.backgrounddownloader.ui.theme.BackgroundDownloaderTheme
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            BackgroundDownloaderTheme {
-                Button(
-                    onClick = { onDownloadClick() }
-                ) {
-                    Text("Скачать")
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                BackgroundDownloaderTheme {
+                    Button(
+                        onClick = { onDownloadClick() }
+                    ) {
+                        Text("Скачать")
+                    }
                 }
             }
         }
