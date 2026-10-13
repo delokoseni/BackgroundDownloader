@@ -46,6 +46,7 @@ class DownloadWorker(
                 "DownloadWorker",
                 "Файл сохранён: ${file.absolutePath}, размер: ${file.length()} байт"
             )
+            DownloadNotification.show(applicationContext, true)
 
             return Result.success()
 
