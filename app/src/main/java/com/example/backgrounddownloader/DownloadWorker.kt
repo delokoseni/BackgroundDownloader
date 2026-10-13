@@ -42,6 +42,11 @@ class DownloadWorker(
                 connection.disconnect()
             }
 
+            Log.d(
+                "DownloadWorker",
+                "Файл сохранён: ${file.absolutePath}, размер: ${file.length()} байт"
+            )
+
             return Result.success()
 
         } catch (e: Exception) {
